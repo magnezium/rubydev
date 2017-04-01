@@ -11,10 +11,7 @@ if
   end
   string = 'max'
   massiv.each do |line|
-    massiv = []
-    (line.split(/[|]/)).each do |line|
-       massiv << line.to_s
-    end
+    massiv = line.split(/[|]/)
     if massiv[1].include?(string)
       puts massiv[1] + '*' * ((massiv[7].to_f - 8)*10).round(0)
     end
