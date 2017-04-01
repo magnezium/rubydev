@@ -5,9 +5,9 @@ unless File.exist?(film_file)
 else
   massiv = []
   File.open(film_file).each do |line|
-    massiv << line.downcase
+    massiv << line
   end
-  string = 'max'
+  string = 'Max'
   massiv.each do |line|
     massiv = line.split('|')
     if massiv[1].include?(string)
